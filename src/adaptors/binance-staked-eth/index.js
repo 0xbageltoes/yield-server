@@ -54,7 +54,6 @@ const apy = async () => {
       searchTokenOverride: wbeth,
       apyBase: apr,
       tvlUsd: tvlBsc * ethPrice * wbethExchangeRate,
-      isIntrinsicSource: true,
     },
   ];
 };
