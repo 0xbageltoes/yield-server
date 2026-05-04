@@ -22,7 +22,7 @@ const apy = async () => {
       symbol: 'lBTC',
       tvlUsd:
         (Number(tvl.balance) / 1e8) * price.coins[`ethereum:${token}`]?.price,
-      apy: apy.lbtc_estimated_apy * 100,
+      apyBase: apy.lbtc_estimated_apy * 100,
       underlyingTokens: [WBTC],
       searchTokenOverride: token,
       isIntrinsicSource: true,

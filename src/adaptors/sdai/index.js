@@ -41,7 +41,7 @@ async function sDAIPool() {
     chain: utils.formatChain('xdai'),
     project: 'sdai',
     symbol: 'sDAI',
-    apy: await getApy(),
+    apyBase: await getApy(),
     tvlUsd: await getTVL(),
     underlyingTokens: [chains.xdai.wxDAI],
     isIntrinsicSource: true,

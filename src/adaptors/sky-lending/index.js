@@ -431,7 +431,7 @@ const susdsAPY = async () => {
     ).output / RAY;
 
   const nChi = Math.pow(ssr, secPerYear) * RAY;
-  const apy = (nChi / RAY - 1) * 100;
+  const apyBase = (nChi / RAY - 1) * 100;
 
   const configs = [
     {
@@ -475,7 +475,7 @@ const susdsAPY = async () => {
         chain,
         token: sUSDS,
         tvlUsd: totalSupply * price,
-        apy,
+        apyBase,
         underlyingTokens: [USDS],
       };
 

@@ -31,7 +31,7 @@ const buildObject = (entry, tokenString, chainString, serviceName) => {
     project: 'ankr',
     symbol: utils.formatSymbol(tokenString),
     tvlUsd: Number(entry.totalStakedUsd),
-    apy: Number(entry.apy),
+    apyBase: Number(entry.apy),
     url: `https://www.ankr.com/staking/stake/${serviceToUrl[serviceName]}`,
     underlyingTokens: [underlying[serviceName]],
     searchTokenOverride: tokenAddresses[serviceName],
