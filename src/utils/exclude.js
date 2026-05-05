@@ -345,6 +345,10 @@ const excludeAdaptors = [
   'zklend',
   'joe-lend',
   'zyberswap-amm',
+  'ironclad-finance',
+  'scream',
+  'stake.link-index',
+  'ploutos-money',
 ];
 
 const excludePools = [
