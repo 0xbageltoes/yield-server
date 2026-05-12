@@ -664,7 +664,7 @@ const marketInfoToPool = (chain, marketInfo, collateral, pricesObj) => {
   const pool = {
     pool: `${marketInfo.address}-${chain}`,
     chain: utils.formatChain(chain),
-    symbol: marketInfo.symbol ?? utils.formatSymbol(collateral.symbol),
+    symbol: marketInfo.symbol ?? collateral.symbol,
     tvlUsd: totalSupplyUsd,
     apyBaseBorrow,
     totalSupplyUsd,
