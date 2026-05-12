@@ -159,7 +159,7 @@ const main = async () => {
         pool: `${key}-${chain}`,
         chain: utils.formatChain(chain),
         project: 'gauntlet',
-        symbol: utils.formatSymbol(data.symbol || 'GAUNTLET'),
+        symbol: data.symbol || 'GAUNTLET',
         tvlUsd: data.tvlUsd,
         apyBase,
         apyBase7d,

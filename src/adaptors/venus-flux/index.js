@@ -49,7 +49,7 @@ const apy = async () => {
         pool: `${token.tokenAddress}-${CHAIN}`.toLowerCase(),
         chain: utils.formatChain(CHAIN),
         project: 'venus-flux',
-        symbol: utils.formatSymbol(sym),
+        symbol: sym,
         tvlUsd: (token.totalAssets / 10 ** dec) * price,
         apyBase: Number((token.supplyRate / 1e2).toFixed(2)),
         apyReward: Number((token.rewardsRate / 1e12).toFixed(2)),

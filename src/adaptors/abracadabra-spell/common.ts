@@ -335,9 +335,7 @@ async function multiRewardFarmsApy(farms: MultiRewardFarms) {
             pool: `${farmAddress}-${chain}`,
             chain: utils.formatChain(chain),
             tvlUsd,
-            symbol: utils.formatSymbol(
-              symbols[stakingTokens[farmAddress]].output
-            ),
+            symbol: symbols[stakingTokens[farmAddress]].output,
             apyBase: stakingTokenYieldPool?.apyBase ?? 0,
             apyReward: aprs[farmAddress].reduce((acc, { apr }) => acc + apr, 0),
             underlyingTokens: stakingTokenYieldPool?.underlyingTokens,

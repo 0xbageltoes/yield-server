@@ -61,7 +61,7 @@ async function getApy() {
         pool: vault.vault,
         chain: "base",
         project: 'singularity-finance',
-        symbol: utils.formatSymbol(referenceAssetSymbol),
+        symbol: referenceAssetSymbol,
         tvlUsd: tvlUsd / 10 ** USDC.decimals,
         apyBase,
         ...(pricePerShare > 0 && { pricePerShare }),

@@ -204,7 +204,7 @@ const getPoolsForChain = async (chain) => {
         pool: `${pool}-${chain}`.toLowerCase(),
         chain: utils.formatChain(chain),
         project: 'ajna-v2',
-        symbol: utils.formatSymbol(symbol),
+        symbol: symbol,
         tvlUsd,
         apyBase,
         underlyingTokens: [quoteToken],

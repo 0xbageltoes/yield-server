@@ -208,7 +208,7 @@ const getPoolsForChain = async (chain, { centralRegistry, protocolReader }) => {
         pool: `${market.toLowerCase()}-${chain}`,
         chain: utils.formatChain(chain),
         project: 'curvance',
-        symbol: utils.formatSymbol(symbol),
+        symbol: symbol,
         tvlUsd,
         apyBase,
         poolMeta,

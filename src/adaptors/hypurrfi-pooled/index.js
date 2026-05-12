@@ -127,7 +127,7 @@ const apy = async () => {
         pool: `${aTokenAddresses[i]}-hypurrfi-pooled`.toLowerCase(),
         chain: utils.formatChain(chain),
         project: "hypurrfi-pooled",
-        symbol: utils.formatSymbol(symbolResults[i]),
+        symbol: symbolResults[i],
         tvlUsd,
         apyBase,
         underlyingTokens: [asset],

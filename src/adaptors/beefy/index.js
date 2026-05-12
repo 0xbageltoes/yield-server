@@ -1,7 +1,6 @@
 const { addMerklRewardApy } = require('../merkl/merkl-additional-reward');
 const {
   formatChain,
-  formatSymbol,
   getData,
   removeDuplicates,
 } = require('../utils');
@@ -156,7 +155,7 @@ const main = async () => {
         pool: `${earnContractAddress}-${llamaChain}`.toLowerCase(),
         chain: formatChain(llamaChain),
         project: 'beefy',
-        symbol: formatSymbol(tokenSymbols.join('-')),
+        symbol: tokenSymbols.join('-'),
         tvlUsd: tvl,
         apy: apy * 100,
         poolMeta,

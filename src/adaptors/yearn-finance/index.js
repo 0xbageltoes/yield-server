@@ -63,7 +63,7 @@ const getApy = async () => {
             pool: p.address,
             chain: utils.formatChain(chain[0]),
             project: 'yearn-finance',
-            symbol: utils.formatSymbol(p.token.display_symbol),
+            symbol: p.token.display_symbol,
             tvlUsd: p.tvl.tvl,
             apyBase,
             apyReward,

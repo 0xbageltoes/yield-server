@@ -9,7 +9,7 @@ const getLendingPoolData = async () => {
         pool: vault.address + '-' + vault.blockchainId,
         chain: utils.formatChain(vault.blockchainId),
         project: 'curve-llamalend',
-        symbol: utils.formatSymbol(vault.assets.borrowed.symbol),
+        symbol: vault.assets.borrowed.symbol,
         poolMeta: vault.assets.collateral.symbol + ' collateral',
         tvlUsd: vault.usdTotal,
         underlyingTokens: [vault.assets.borrowed.address],

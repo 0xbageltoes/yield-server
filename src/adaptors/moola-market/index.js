@@ -81,7 +81,7 @@ const poolsFunction = async () => {
       chain: utils.formatChain('celo'),
       project: 'moola-market',
       pool: meta.pool,
-      symbol: utils.formatSymbol(meta.symbol),
+      symbol: meta.symbol,
       apyBase: apyData.data[coin].apy,
       tvlUsd: Number(apyData.data[coin].availableLiquidity) * price,
       underlyingTokens: meta.underlyingTokens,

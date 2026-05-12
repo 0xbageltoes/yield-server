@@ -13,7 +13,7 @@ const getApy = async () => {
                     pool: r.reserve,
                     chain: 'Solana',
                     project: 'kamino-lend',
-                    symbol: utils.formatSymbol(r.liquidityToken),
+                    symbol: r.liquidityToken,
                     underlyingTokens: [r.liquidityTokenMint],
                     tvlUsd: Number(r.totalSupplyUsd - r.totalBorrowUsd),
                     url: `https://app.kamino.finance/lending/reserve/${r.reserve}`,

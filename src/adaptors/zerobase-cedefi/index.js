@@ -180,7 +180,7 @@ const apy = async () => {
           pool: `${zkTokenAddr}-${chainName}`.toLowerCase(),
           chain: chainName,
           project: PROJECT,
-          symbol: utils.formatSymbol(sym),
+          symbol: sym,
           tvlUsd: Number(tvlUsd),
           apyBase: Number(apyBase),
           apyReward: 2,

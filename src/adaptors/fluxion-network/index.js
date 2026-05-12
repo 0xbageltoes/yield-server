@@ -79,9 +79,7 @@ async function apy() {
         pool: pool.id.toLowerCase(),
         chain: utils.formatChain(CHAIN),
         project: PROJECT,
-        symbol: utils.formatSymbol(
-          `${pool.token0.symbol}-${pool.token1.symbol}`
-        ),
+        symbol: `${pool.token0.symbol}-${pool.token1.symbol}`,
         tvlUsd,
         apyBase,
         apyBase7d,

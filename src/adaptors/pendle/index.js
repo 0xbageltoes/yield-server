@@ -252,7 +252,7 @@ async function poolApys(chainId, pools) {
       pool: p.address,
       chain: utils.formatChain(chains[chainId].chainName),
       project: 'pendle',
-      symbol: utils.formatSymbol(p.name),
+      symbol: p.name,
       tvlUsd: p.details.liquidity,
       apyBase: (p.details.aggregatedApy - p.details.pendleApy) * 100,
       ...(apyReward > 0 && {
@@ -273,7 +273,7 @@ function ptApys(chainId, pools) {
     pool: splitId(p.pt).address,
     chain: utils.formatChain(chains[chainId].chainName),
     project: 'pendle',
-    symbol: utils.formatSymbol(p.name),
+    symbol: p.name,
     tvlUsd: p.details.liquidity,
     apyBase: p.details.impliedApy * 100,
     underlyingTokens: [splitId(p.underlyingAsset).address].map(resolveToken),

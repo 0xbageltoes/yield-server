@@ -34,7 +34,7 @@ const sdk = (() => {
 })();
 const { default: BigNumber } = require('bignumber.js');
 const utils = require('../utils');
-const { formatChain, formatSymbol } = utils;
+const { formatChain } = utils;
 
 const CONFIG = {
   monad: {
@@ -370,7 +370,7 @@ const getMuBondPool = async (
       pool: `${muBond}-${chain}`.toLowerCase(),
       chain: formatChain(chain),
       project: 'mu-digital',
-      symbol: formatSymbol(symbolRes),
+      symbol: symbolRes,
       tvlUsd,
       apyBase,
       ...(priceFromFeed && !priceFromFeed.isZero() && {
@@ -493,7 +493,7 @@ const getVaultData = async (
       pool: `${vault}-${chain}`.toLowerCase(),
       chain: formatChain(chain),
       project: 'mu-digital',
-      symbol: formatSymbol(vaultSymbolRes),
+      symbol: vaultSymbolRes,
       tvlUsd,
       apyBase: erc4626Info?.apyBase ?? 0,
       ...(Number.isFinite(erc4626Info?.pricePerShare) && erc4626Info.pricePerShare > 0 && { pricePerShare: erc4626Info.pricePerShare }),

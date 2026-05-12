@@ -212,7 +212,7 @@ const main = async () => {
         pool: `${vault.vaultId}-sui`.toLowerCase(),
         chain: utils.formatChain('sui'),
         project: 'abyss',
-        symbol: utils.formatSymbol(vault.symbol),
+        symbol: vault.symbol,
         tvlUsd,
         apyBase,
         pricePerShare: Number.isFinite(er) && er > 0 ? er : null,

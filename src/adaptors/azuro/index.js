@@ -53,7 +53,7 @@ const poolsFunction = async () => {
         pool: pool.address,
         chain: chain,
         project: 'azuro',
-        symbol: utils.formatSymbol(pool.asset),
+        symbol: pool.asset,
         tvlUsd: Number(pool.tvl),
         apyBase: apr ? Number(apr.aprDayAgo) : Number(pool.apr),
         poolMeta: '7 day lockup',

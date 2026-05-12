@@ -49,7 +49,7 @@ const apy = async (timestamp) => {
       pool: `${VAULT_ADDRESS}-${CHAIN}`.toLowerCase(),
       chain: utils.formatChain(CHAIN),
       project: 'altura',
-      symbol: utils.formatSymbol('USDT0'),
+      symbol: 'USDT0',
       tvlUsd: vaultInfo.tvl / 1e6,
       apyBase: vaultInfo.apyBase,
       apyReward: rewards.apyReward,

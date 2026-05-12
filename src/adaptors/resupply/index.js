@@ -28,7 +28,7 @@ const formatPair = (pair, chain, protocol) => {
     pool: `${pair.address.toLowerCase()}-${chain}`,
     chain: utils.formatChain(chain),
     project: 'resupply',
-    symbol: utils.formatSymbol(symbol),
+    symbol: symbol,
     tvlUsd: parseFloat(pair.total_underlying),
     mintedCoin: pair.debt_token.symbol,
     apyBase: parseFloat(pair.base_apr),

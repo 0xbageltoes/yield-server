@@ -232,7 +232,7 @@ const makePool = async (market, tokens, prices) => {
     pool: `${market.id}-${config.chain}`,
     chain: utils.formatChain(config.chain),
     project: 'linx-app',
-    symbol: utils.formatSymbol(symbol),
+    symbol: symbol,
     tvlUsd,
     underlyingTokens: [marketParams.loanToken],
     apyBase: Number(supplyApy) / 10 ** 16,

@@ -24,7 +24,7 @@ const getPool = async () => {
     pool: 'chainflip-boost-btc',
     chain: utils.formatChain('bitcoin'),
     project: 'chainflip-amm',
-    symbol: utils.formatSymbol('BTC'),
+    symbol: 'BTC',
     tvlUsd: boostPool.tvl,
     apyBase: boostPool.apy,
     url: 'https://scan.chainflip.io/pools/Btc/boost',

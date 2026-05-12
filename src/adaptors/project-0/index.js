@@ -69,7 +69,7 @@ const getApy = async () => {
       pool: `project-0-${bankAddress}`,
       chain: 'Solana',
       project: 'project-0',
-      symbol: utils.formatSymbol(symbol),
+      symbol: symbol,
       underlyingTokens: mint ? [mint] : undefined,
       tvlUsd: tvlUsd,
       url: mint ? `https://app.0.xyz/markets/${mint}` : 'https://app.0.xyz/',

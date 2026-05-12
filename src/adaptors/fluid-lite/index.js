@@ -41,7 +41,7 @@ const getLiteUsdPool = async () => {
       pool: address,
       chain: utils.formatChain('ethereum'),
       project: 'fluid-lite',
-      symbol: utils.formatSymbol(underlyingAsset.symbol),
+      symbol: underlyingAsset.symbol,
       tvlUsd,
       apy: Number(rate) / 100,
       underlyingTokens: [normalizeNativeAddress(asset)],

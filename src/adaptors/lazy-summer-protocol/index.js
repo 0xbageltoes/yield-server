@@ -233,7 +233,7 @@ const main = async () => {
           pool: `${vault.address}-${chain}`.toLowerCase(),
           chain: utils.formatChain(chain),
           project: PROJECT_NAME,
-          symbol: utils.formatSymbol(baseSymbol),
+          symbol: baseSymbol,
           tvlUsd,
           apyBase,
           apyBase7d,

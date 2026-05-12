@@ -154,7 +154,7 @@ const apy = async () => {
         pool: `${pool.address}-${CHAIN}`.toLowerCase(),
         chain: utils.formatChain(CHAIN),
         project: PROJECT,
-        symbol: utils.formatSymbol(`${sym0}-${sym1}`),
+        symbol: `${sym0}-${sym1}`,
         tvlUsd,
         apyBase,
         poolMeta: `${pool.fee / 1e4}%`,

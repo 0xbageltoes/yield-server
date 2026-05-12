@@ -70,9 +70,7 @@ const apy = async (timestamp = null) => {
         pool: `${pool.id}-${CHAIN}`,
         chain: utils.formatChain(CHAIN),
         project: PROJECT,
-        symbol: utils.formatSymbol(
-          `${pool.token0.symbol}-${pool.token1.symbol}`
-        ),
+        symbol: `${pool.token0.symbol}-${pool.token1.symbol}`,
         tvlUsd,
         apyBase,
         apyBase7d,

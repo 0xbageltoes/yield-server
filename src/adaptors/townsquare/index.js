@@ -122,7 +122,7 @@ const apy = async () => {
         pool: `${poolAddr}-${chain}`.toLowerCase(),
         chain: utils.formatChain(chain),
         project: 'townsquare',
-        symbol: utils.formatSymbol(symbol),
+        symbol: symbol,
         tvlUsd,
         apyBase,
         underlyingTokens: [tokenAddr],

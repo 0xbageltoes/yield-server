@@ -122,7 +122,7 @@ const apy = async () => {
       pool: underlying, // should be changed to lp token
       chain: 'Ethereum',
       project: 'across',
-      symbol: utils.formatSymbol(token[0]),
+      symbol: token[0],
       tvlUsd,
       underlyingTokens: [underlying],
       apyBase: Number(liquidityPools[underlying].estimatedApy) * 100,

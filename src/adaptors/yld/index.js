@@ -33,7 +33,7 @@ const getApy = async () => {
           pool: `${vault.address}-ethereum`.toLowerCase(),
           chain: utils.formatChain('ethereum'),
           project: 'yld',
-          symbol: utils.formatSymbol(vault.symbol),
+          symbol: vault.symbol,
           tvlUsd: (info.tvl / 1e18) * tokenPrice,
           apyBase: info.apyBase,
           pricePerShare: info.pricePerShare,

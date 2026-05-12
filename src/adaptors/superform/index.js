@@ -155,7 +155,7 @@ const main = async () => {
         pool: `superform-${vault.address}-${chain}`.toLowerCase(),
         chain: utils.formatChain(chain),
         project: PROJECT_NAME,
-        symbol: utils.formatSymbol(symbol),
+        symbol: symbol,
         tvlUsd,
         apyBase,
         // SuperVault shares are 18-dec; assets in own decimals.

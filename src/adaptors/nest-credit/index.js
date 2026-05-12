@@ -33,7 +33,7 @@ const poolsFunction = async () => {
       pool: address,
       chain: utils.formatChain(PLUME_CHAIN_KEY),
       project: 'nest-credit',
-      symbol: utils.formatSymbol(v.symbol || 'NEST'),
+      symbol: v.symbol || 'NEST',
       tvlUsd: Number(v.tvl || 0),
       apyBase: apyBase,
       url: `https://app.nest.credit/vaults/${v.slug}`,
