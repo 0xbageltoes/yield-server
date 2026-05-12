@@ -144,7 +144,7 @@ const getGaugePoolData = async () => {
         pool: `${gauge}-f(x)`,
         chain: utils.formatChain('ethereum'),
         project: 'fx-protocol',
-        symbol: utils.formatSymbol(name),
+        symbol: name,
         ...(lpAddress && { token: lpAddress }),
         tvlUsd: parseInt(tvl, 10),
         apy: parseFloat(apy),

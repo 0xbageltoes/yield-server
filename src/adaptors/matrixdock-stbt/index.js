@@ -145,7 +145,7 @@ const getPoolsForChain = async (chain) => {
         pool: `${token.address}-${chain}`.toLowerCase(),
         chain: utils.formatChain(chain),
         project: 'matrixdock-stbt',
-        symbol: utils.formatSymbol(token.symbol),
+        symbol: token.symbol,
         tvlUsd,
         apyBase: Number(apyBase.toFixed(2)),
         apyBase7d: Number(apyBase7d.toFixed(2)),

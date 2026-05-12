@@ -92,7 +92,7 @@ async function getPoolBMX(
     pool: pInflationTrackerAddress,
     chain: utils.formatChain(pChain),
     project,
-    symbol: utils.formatSymbol('BMX'),
+    symbol: 'BMX',
     tvlUsd: tvlBmx,
     apyBase: apyFee,
     apyReward: apyInflation,

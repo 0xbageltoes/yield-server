@@ -26,7 +26,7 @@ const getPools = async () => {
     pool: pool.pool,
     chain: utils.formatChain(pool.chain),
     project: 'chainflip-lending',
-    symbol: utils.formatSymbol(pool.asset.toUpperCase()),
+    symbol: pool.asset.toUpperCase(),
     tvlUsd: pool.tvl,
     apyBase: pool.apy,
     url: `https://scan.chainflip.io/pools/${pool.asset}/lending`,

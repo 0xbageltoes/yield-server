@@ -100,9 +100,7 @@ const buildPools = (pairs, volumeData, kasPrice, chain) => {
       const apyBase7d =
         tvlUsd > 0 ? ((volumeUsd7d * FEE_RATE * 52) / tvlUsd) * 100 : 0;
 
-      const symbol = utils.formatSymbol(
-        `${pair.token0.symbol}-${pair.token1.symbol}`
-      );
+      const symbol = `${pair.token0.symbol}-${pair.token1.symbol}`;
 
       return {
         pool: `${pair.id}-${chain}`,

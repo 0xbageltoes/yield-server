@@ -349,7 +349,7 @@ const main = async () => {
         pool: `${market.id}-ethereum`,
         chain: 'Ethereum',
         project: 'silo-v1',
-        symbol: utils.formatSymbol(name),
+        symbol: name,
         tvlUsd: tvlUsd.toNumber(),
         apyBase: Number(inputTokenSupplyRateObject.rate),
         apyBaseBorrow: Number(inputTokenBorrowRateObject.rate),

@@ -179,7 +179,7 @@ const getUzrPool = async (prices) => {
     pool: UZRLendingMarket.toLowerCase(),
     chain: utils.formatChain(CHAIN),
     project: PROJECT,
-    symbol: utils.formatSymbol('UZR'),
+    symbol: 'UZR',
     tvlUsd,
     apyBase: apr,
     apyBaseBorrow: 0,
@@ -365,7 +365,7 @@ const buildPool = ({
     pool: `${lendingMarket.toLowerCase()}-${marketId}`,
     chain: utils.formatChain(CHAIN),
     project: PROJECT,
-    symbol: utils.formatSymbol(`${collateralSymbol}-${loanSymbol}`),
+    symbol: `${collateralSymbol}-${loanSymbol}`,
     tvlUsd,
     apyBase: preferOnchainApy(computedApyBase, aprPoolData?.apyBase),
     apyBaseBorrow: preferOnchainApy(

@@ -420,7 +420,7 @@ const main = async () => {
         project: 'convex-finance',
         symbol: ( // Symbol of the supplied token
           pool.isLendingVault ?
-            utils.formatSymbol(pool.assets.borrowed.symbol) :
+            pool.assets.borrowed.symbol :
             pool.coins.map((coin) => coin.symbol).join('-')
         ),
         poolMeta: ( // Displayed in parens next to `symbol`

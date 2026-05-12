@@ -89,7 +89,7 @@ const getApy = async (chain) => {
         pool: `${c.hub}-${c.assetId}-${chain}`.toLowerCase(),
         chain: utils.formatChain(chain),
         project: 'aave-v4',
-        symbol: utils.formatSymbol(symbol),
+        symbol: symbol,
         tvlUsd,
         apyBase,
         underlyingTokens: [underlying],

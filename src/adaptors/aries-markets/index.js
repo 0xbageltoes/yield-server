@@ -58,7 +58,7 @@ async function calculateRewardApy(coin, reserveStatsMap, aptPrice) {
         pool: `aries-markets-${coinSymbol}`,
         chain: utils.formatChain('aptos'),
         project: 'aries-markets',
-        symbol: utils.formatSymbol(coinSymbol),
+        symbol: coinSymbol,
         tvlUsd: netTvl,
         apyBase: interestApy,
         underlyingTokens: [coinAddr],

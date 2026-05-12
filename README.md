@@ -147,7 +147,7 @@ const poolsFunction = async () => {
     pool: 'terra1hzh9vpxhsk8253se0vv5jj6etdvxu3nv8z07zu',
     chain: utils.formatChain('terra'),
     project: 'anchor',
-    symbol: utils.formatSymbol('UST'),
+    symbol: 'UST',
     tvlUsd: Number(dataTvl.total_ust_deposits) / 1e6,
     apy: apyData.deposit_apy * 100,
   };

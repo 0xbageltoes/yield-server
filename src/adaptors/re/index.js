@@ -83,7 +83,7 @@ const main = async () => {
       pool: `${vault.token}-${CHAIN}`.toLowerCase(),
       chain: utils.formatChain(CHAIN),
       project: PROJECT_NAME,
-      symbol: utils.formatSymbol(vault.symbol),
+      symbol: vault.symbol,
       tvlUsd,
       apyBase,
       underlyingTokens: vault.underlyingTokens,

@@ -207,7 +207,7 @@ const apy = async () => {
       pool: p,
       chain: 'Optimism',
       project,
-      symbol: utils.formatSymbol(symbol),
+      symbol: symbol,
       tvlUsd,
       apyReward,
       rewardTokens: apyReward > 0 ? [velo] : [],

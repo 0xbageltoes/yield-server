@@ -212,7 +212,7 @@ const buildPool = (entry, chainString) => {
     pool: `${entry.lpToken}-concentrator`.toLowerCase(),
     chain: utils.formatChain(chainString),
     project: 'concentrator',
-    symbol: utils.formatSymbol(entry.symbol),
+    symbol: entry.symbol,
     tvlUsd: parseInt(entry.tvl, 10),
     apy: parseFloat(entry.apy),
     ...(underlyings && { underlyingTokens: underlyings }),

@@ -29,7 +29,7 @@ const getApy = async () => {
               pool: `${identifier}-${chainName}`.toLowerCase(),
               chain: utils.formatChain(chainName),
               project: 'betswirl',
-              symbol: utils.formatSymbol(symbol),
+              symbol: symbol,
               tvlUsd: tvlUsd,
               apy: apr,
               rewardTokens,

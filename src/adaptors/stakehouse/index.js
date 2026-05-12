@@ -112,7 +112,7 @@ const topLvl = async (chainString, url) => {
         pool: `${result.savETHPool}-${chainString}`.toLowerCase(),
         chain: utils.formatChain(chainString),
         project: 'stakehouse',
-        symbol: utils.formatSymbol(Object.values(aprData)[i].Ticker),
+        symbol: Object.values(aprData)[i].Ticker,
         tvlUsd: tvlUsd,
         apyBase: Number(Object.values(aprData)[i].APR),
         underlyingTokens: ['0x0000000000000000000000000000000000000000'],

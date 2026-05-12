@@ -66,7 +66,7 @@ const getApy = async () => {
       pool: `${VAULT}-${CHAIN}`.toLowerCase(),
       chain: utils.formatChain(CHAIN),
       project: 'arche',
-      symbol: utils.formatSymbol('arUSD'),
+      symbol: 'arUSD',
       tvlUsd: Number(totalAssets.output) / 1e6,
       apyBase,
       pricePerShare: ppsNow,

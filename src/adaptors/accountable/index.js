@@ -204,7 +204,7 @@ const apy = async() => {
                 pool: `${item.loan_address}-${chainName}`.toLowerCase(),
                 chain: utils.formatChain(chainName),
                 project: 'accountable',
-                symbol: utils.formatSymbol(item.asset_symbol),
+                symbol: item.asset_symbol,
                 tvlUsd: toUsd(stats.tvl),
                 apyBase: baseApy,
                 apyReward: totalApyReward,

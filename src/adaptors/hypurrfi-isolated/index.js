@@ -193,7 +193,7 @@ const apy = async () => {
         pool: `${pairAddr}-hypurrfi-isolated`.toLowerCase(),
         chain: utils.formatChain(chain),
         project: "hypurrfi-isolated",
-        symbol: utils.formatSymbol(symbol),
+        symbol: symbol,
         tvlUsd,
         apyBase,
         underlyingTokens: [asset],

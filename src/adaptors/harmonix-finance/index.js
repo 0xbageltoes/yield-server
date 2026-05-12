@@ -121,7 +121,7 @@ const getApy = async () => {
         pool: v.contract_address, // unique identifier for the pool
         chain: chainId || null, // map chain name to chain ID
         project: 'harmonix-finance', // project slug
-        symbol: utils.formatSymbol(v.vault_currency), // format the symbol
+        symbol: v.vault_currency,
         tvlUsd, // total value locked in USD
         apyBase: v.apy, // APY from the vault
         apyReward: 0, // hardcoded for now

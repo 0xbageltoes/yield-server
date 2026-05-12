@@ -80,7 +80,7 @@ const poolsFunction = async () => {
       pool: `${SAID_VAULT}-ethereum`.toLowerCase(),
       chain: utils.formatChain("ethereum"),
       project: "gaib",
-      symbol: utils.formatSymbol("sAID"),
+      symbol: "sAID",
       tvlUsd,
       apyBase,
       ...(navNow > 0 && { pricePerShare: navNow }),

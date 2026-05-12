@@ -82,7 +82,7 @@ async function apy() {
       pool: `${vault.address}-${CHAIN}`.toLowerCase(),
       chain: utils.formatChain(CHAIN),
       project: 'zircuit-finance',
-      symbol: utils.formatSymbol(symbol),
+      symbol: symbol,
       tvlUsd,
       apyBase,
       // rNow is in asset decimals; shares are 18-dec.

@@ -55,7 +55,7 @@ const buildPool = (entry, runePrice) => {
     pool: entry.asset,
     chain: chain !== undefined ? utils.formatChain(chain) : null,
     project: 'thorchain-dex',
-    symbol: utils.formatSymbol(symbol),
+    symbol: symbol,
     tvlUsd: balanceAsset + balanceRune,
     apy: Number(entry.poolAPY) * 100,
     // Resolve underlying: native assets use coingecko, EVM tokens extract address

@@ -32,7 +32,7 @@ const buildDataSource = async (poolArr, depositsStakingInfo, loanType) => {
       pool: `${pool.appId}-algorand`,
       chain: utils.formatChain('algorand'),
       project: 'folks-finance-lending',
-      symbol: utils.formatSymbol(pool.symbol),
+      symbol: pool.symbol,
       tvlUsd,
       totalSupplyUsd,
       totalBorrowUsd,

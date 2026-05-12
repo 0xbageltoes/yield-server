@@ -1,4 +1,4 @@
-const { getData, formatChain, formatSymbol, keepFinite } = require('../utils');
+const { getData, formatChain, keepFinite } = require('../utils');
 
 const PROJECT = 'metrom';
 const METROM_REWARDS_URL = 'https://app.metrom.xyz/en?type=rewards';
@@ -225,16 +225,14 @@ async function processCampaign(
   switch (campaign.target.type) {
     case 'amm-pool-liquidity': {
       return {
-        symbol: formatSymbol(
-          campaign.target.tokens.map((token) => token.symbol).join(' - ')
-        ),
+        symbol: campaign.target.tokens.map((token) => token.symbol).join(' - '),
         underlyingTokens: campaign.target.tokens.map((token) => token.address),
       };
     }
     case 'liquity-v2-debt':
     case 'liquity-v2-stability-pool': {
       return {
-        symbol: formatSymbol(campaign.target.collateral.symbol),
+        symbol: campaign.target.collateral.symbol,
         underlyingTokens: [campaign.target.collateral.address],
       };
     }
@@ -247,7 +245,7 @@ async function processCampaign(
     case 'aave-v3-borrow':
     case 'aave-v3-net-supply': {
       return {
-        symbol: formatSymbol(campaign.target.collateral.symbol),
+        symbol: campaign.target.collateral.symbol,
         underlyingTokens: [campaign.target.collateral.address],
       };
     }
@@ -259,9 +257,7 @@ async function processCampaign(
         opportunity?.incentives || campaign.target.incentives || [];
 
       return {
-        symbol: formatSymbol(
-          (opportunity?.name || campaign.target.name).replace(/^Katana\s+/i, '')
-        ),
+        symbol: (opportunity?.name || campaign.target.name).replace(/^Katana\s+/i, ''),
         underlyingTokens: getTurtleUnderlyingTokens(opportunity),
         url: opportunity?.url,
         ...getTurtleApyFields(incentives, campaign.apr),
@@ -269,7 +265,7 @@ async function processCampaign(
     }
     case 'yield-seeker': {
       return {
-        symbol: formatSymbol(campaign.id),
+        symbol: campaign.id,
         underlyingTokens: [],
       };
     }
