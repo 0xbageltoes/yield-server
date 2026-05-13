@@ -349,6 +349,7 @@ const excludeAdaptors = [
   'scream',
   'stake.link-index',
   'ploutos-money',
+  'amnis-finance', // temp only, until fix is in
 ];
 
 const excludePools = [
