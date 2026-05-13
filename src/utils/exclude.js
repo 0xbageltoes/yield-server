@@ -351,6 +351,7 @@ const excludeAdaptors = [
   'ploutos-money',
   'amnis-finance', // temp only, until fix is in
   'aave-v2',
+  'aura', // winding down
 ];
 
 const excludePools = [
