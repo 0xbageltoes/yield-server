@@ -350,6 +350,7 @@ const excludeAdaptors = [
   'stake.link-index',
   'ploutos-money',
   'amnis-finance', // temp only, until fix is in
+  'aave-v2',
 ];
 
 const excludePools = [
