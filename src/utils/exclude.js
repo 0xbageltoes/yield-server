@@ -353,6 +353,14 @@ const excludeAdaptors = [
   'aave-v2',
   'aura', // winding down
   'acryptos',
+  'mover',
+  'velocimeter-v2',
+  'sparkdex-v3',
+  'unilend-protocol',
+  'fvm-exchange',
+  'baseswap-v2',
+  'fungify',
+  'arbitrove',
 ];
 
 const excludePools = [
