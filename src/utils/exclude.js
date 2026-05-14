@@ -361,6 +361,8 @@ const excludeAdaptors = [
   'baseswap-v2',
   'fungify',
   'arbitrove',
+  'kokoa-finance',
+  'yusan',
 ];
 
 const excludePools = [

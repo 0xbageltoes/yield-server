@@ -4,6 +4,7 @@ const PROJECT = 'metrom';
 const METROM_REWARDS_URL = 'https://app.metrom.xyz/en?type=rewards';
 const TURTLE_OPPORTUNITY_URL =
   'https://gateway.turtle.xyz/turtle/opportunities';
+const BASE_USDC = '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913';
 
 type ByChainTypeAndId<I> = Record<string, Record<number, I>>;
 
@@ -265,8 +266,8 @@ async function processCampaign(
     }
     case 'yield-seeker': {
       return {
-        symbol: campaign.id,
-        underlyingTokens: [],
+        symbol: 'USDC',
+        underlyingTokens: [BASE_USDC],
       };
     }
     default: {

@@ -32,6 +32,7 @@ const cgMapping = {
   SKY: 'sky',
   LINK: 'chainlink',
   SOL: 'solana',
+  GSOL: 'solana',
   CRU: 'crust-network',
   EWT: 'energy-web-token',
   UNQ: 'unique-network',
