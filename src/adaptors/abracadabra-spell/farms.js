@@ -16,6 +16,8 @@ const makeCall = async (targets, abi) => {
 };
 
 const SPELL_ADDRESS = '0x090185f2135308bad17527004364ebcc2d37e5f6';
+const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
+const CURVE_COINS_ABI = 'function coins(uint256) view returns (address)';
 
 const getPrices = async (addresses) => {
   const prices = (
@@ -155,6 +157,27 @@ const getApy = async () => {
       ).output.map(({ output }) => output)
     )
   );
+  const curveUnderlyingTokens = await Promise.all(
+    Object.keys(POOLS).map(async (chain, i) => {
+      const indexes = [0, 1, 2, 3];
+      const coins = (
+        await sdk.api.abi.multiCall({
+          calls: poolsInfo[i].flatMap((pool) =>
+            indexes.map((idx) => ({ target: pool.stakingToken, params: [idx] }))
+          ),
+          abi: CURVE_COINS_ABI,
+          chain,
+          permitFailure: true,
+        })
+      ).output.map(({ output }) => output);
+
+      return poolsInfo[i].map((_, idx) =>
+        coins
+          .slice(idx * indexes.length, (idx + 1) * indexes.length)
+          .filter((coin) => coin && coin !== ZERO_ADDRESS)
+      );
+    })
+  );
 
   const underlying0Symbol = await Promise.all(
     Object.keys(POOLS).map(async (chain, i) =>
@@ -224,6 +247,7 @@ const getApy = async () => {
     return poolsInfo[i].map((pool, idx) => {
       const token0 = underlying0[i][idx];
       const token1 = underlying1[i][idx];
+      const underlyingTokens = [token0, token1].filter(Boolean);
 
       let tvlUsd = 0;
       const isCryptoPool = token0 && token1;
@@ -255,7 +279,10 @@ const getApy = async () => {
         symbol,
         apyReward,
         rewardTokens: [SPELL_ADDRESS],
-        underlyingTokens: [token0, token1].filter(Boolean),
+        underlyingTokens:
+          underlyingTokens.length > 0
+            ? underlyingTokens
+            : curveUnderlyingTokens[i][idx],
       };
     });
   });

@@ -59,6 +59,7 @@ const main = async () => {
   return data
     .filter((p) => p)
     .map((p) => {
+      const { apyReward, ...pool } = p;
       // if - in symbol -> split, keep 1 in array, otherwise don't split
       let symbolSplit = p.symbol.split('-');
       symbolSplit = symbolSplit.length > 1 ? symbolSplit[1] : symbolSplit[0];
@@ -73,7 +74,7 @@ const main = async () => {
         || undefined;
 
       return {
-        ...p,
+        ...pool,
         symbol,
         poolMeta,
         project: 'cian-yield-layer',
