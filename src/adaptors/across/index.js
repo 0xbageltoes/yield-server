@@ -119,7 +119,7 @@ const apy = async () => {
     );
 
     return {
-      pool: underlying, // should be changed to lp token
+      pool: token[1].lpAddress,
       chain: 'Ethereum',
       project: 'across',
       symbol: token[0],
